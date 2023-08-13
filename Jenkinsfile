@@ -27,17 +27,12 @@ pipeline {
                                 transfers: [
                                     sshTransfer(
                                         cleanRemote: false,
-					usePromotionTimestamp: true, 
-				        useWorkspaceInPromotion: true,
-                                        verbose: true,
-                                        //excludes: '’,
                                         execCommand: 'sudo /usr/bin/systemctl stop train-schedule && rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /usr/bin/systemctl start train-schedule',
                                         execTimeout: 120000,
-                                        flatten: false,
-                                        noDefaultExcludes: false, 
-				        //patternSeparator: '[, ]+’,
+                                        flatten: true,
+                                        noDefaultExcludes: true, 
                                         remoteDirectory: '/tmp',
-                                        remoteDirectorySDF: false,
+                                        remoteDirectorySDF: true,
                                         removePrefix: 'dist/',
                                         sourceFiles: 'dist/trainSchedule.zip' 
                                     )
