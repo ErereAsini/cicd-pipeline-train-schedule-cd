@@ -32,13 +32,13 @@ pipeline {
                                         execTimeout: 120000,
                                         flatten: false,
                                         noDefaultExcludes: false, 
-				                        patternSeparator: '[, ]+’,
+				        patternSeparator: '[, ]+’,
                                         remoteDirectory: '/tmp',
                                         remoteDirectorySDF: false,
                                         removePrefix: 'dist/',
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         usePromotionTimestamp: false, 
-				                        useWorkspaceInPromotion: false,
+				        useWorkspaceInPromotion: false,
                                         verbose: true
                                         
                                     )
