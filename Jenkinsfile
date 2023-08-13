@@ -37,8 +37,8 @@ pipeline {
                                         remoteDirectorySDF: false,
                                         removePrefix: 'dist/',
                                         sourceFiles: 'dist/trainSchedule.zip',
-                                        usePromotionTimestamp: false, 
-				        useWorkspaceInPromotion: false,
+                                        usePromotionTimestamp: true, 
+				        useWorkspaceInPromotion: true,
                                         verbose: true
                                         
                                     )
