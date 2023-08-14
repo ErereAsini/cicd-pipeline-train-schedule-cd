@@ -29,6 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
+                                        echo 'Rinning Exec command',
                                         //execCommand: 'sudo /usr/bin/systemctl stop train-scheduler && rm -rf /opt/train-scheduler/* && unzip /tmp/trainSchedule.zip -d /opt/train-scheduler && sudo /usr/bin/systemctl start train-scheduler'
                                     )
                                 ]
